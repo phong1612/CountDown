@@ -17,10 +17,13 @@ body {
 h1 {
     font-size: 3rem;
     margin-top: -2rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 .container {
     display: flex;
     margin: 0 2rem;
+    flex-wrap: wrap;
 }
 .contain {
     text-align: center;
