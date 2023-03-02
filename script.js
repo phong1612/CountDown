@@ -4,28 +4,12 @@ function getSec() {
     let getID = document.getElementById("DatePick").value;
     getID = getID.split('-');
     const new_ID = getID[0] + '/' + getID[1] + '/' + getID[2];
-    //2024-01-01
-    //console.log(new Date("2024/01/01"));
-    //console.log(document.getElementById("DatePick"));
-    //console.log(getID.value);
     const current = new Date();
-    //console.log(current);
     const day = ("0" + current.getDate()).slice(-2);
     const month = ("0" + (current.getMonth() + 1)).slice(-2);
     const today = current.getFullYear()+ "/" + month + "/" + day;
-    //console.log(today);
     const selected_day = new Date(new_ID);
-    //console.log(selected_day);
-    //console.log(selected_day);
-    //console.log(getID.value);
-    //console.log(current);
     const TotalSec = Math.floor((selected_day - current) / 1000);
-    
-    //console.log(TotalSec);
-    /*if(TotalSec < 0) {
-        const pan = document.getElementById("Select-date");
-        pan.ad
-    }*/
     if(TotalSec < 0) {
         document.getElementById("days").innerHTML = 0;
         document.getElementById("hours").innerHTML = 0;
